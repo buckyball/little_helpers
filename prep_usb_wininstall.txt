@@ -1,0 +1,9 @@
+:: prepare USB for win install
+diskpart
+list disks
+sel dis #USB
+lis par
+sel par #PAR
+format fs=FAT32 LABEL="LekkaPommes" QUICK OVERRIDE
+active
+exit
